@@ -1,0 +1,98 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int opcoes;
+    int modelo;
+    int pagamento;
+    double preco;
+
+    cout << "Escolha a opcao de produto que voce deseja! " << endl;
+    cout << "(1) Celulares (2) Computadores (3) Televisoes" << endl;
+    cin >> opcoes;
+
+    switch (opcoes) {
+        case 1:
+            cout << "Escolha o modelo do seu celular" << endl;
+            cout << "(1) iPhone 16 (2) Poco X3 (3) Samsung S24" << endl;
+            cin >> modelo;
+
+            switch (modelo) {
+                case 1:
+                    preco = 13000;
+                    cout << "O valor para o iPhone 16 é de R$13000" << endl;
+                    break;
+                case 2:
+                    preco = 2000;
+                    cout << "O valor para o Poco X3 é de R$2000" << endl;
+                    break;
+                case 3:
+                    preco = 2000;
+                    cout << "O valor para o Samsung S24 é de R$2000" << endl;
+                    break;
+            }
+            break;
+
+
+
+
+
+
+
+                case 2:
+                    cout << "Escolha o modelo do seu computador" << endl;
+            cout << "(1) Dell Inspiron (2) MacBook Pro (3) HP Pavilion" << endl;
+            cin >> modelo;
+
+            switch (modelo) {
+                case 1:
+                    preco = 4000;
+                    cout << "O valor para a Dell Inspiron é de R$4000" << endl;
+                    break;
+                case 2:
+                    preco = 6000;
+                    cout << "O valor para o MacBook Pro é de R$6000" << endl;
+                    break;
+                case 3:
+                    preco = 3000;
+                    cout << "O valor para o HP Pavilion é de R$3000" << endl;
+                    break;
+            }
+
+
+
+
+                  }
+
+            cout << "Escolha o metodo de pagamento:" << endl;
+            cout << "(1) À vista com desconto de 10%" << endl;
+            cout << "(2) Parcelado" << endl;
+            cin >> pagamento;
+
+            switch (pagamento) {
+                case 1:
+                    preco = preco * 0.10;
+                    cout << "O valor final com 10% de desconto é R$" << preco << endl;
+                    break;
+                case 2:
+                    cout << "O valor sera parcelado em ate 3x sem juros" << endl;
+                    cout << "Deseja parcelar em quantas vezes? ";
+                    int parcelas;
+                    cin >> parcelas;
+
+                    if (parcelas > 3) {
+                        preco = preco * 1.08;
+                        cout << "Com acréscimo de 8%, o valor final é R$" << preco << endl;
+                    } else {
+                        cout << "O valor será parcelado em " << parcelas << "x de R$" << (preco / parcelas) << endl;
+                    }
+                    break;
+            }
+
+    }
+
+
+
